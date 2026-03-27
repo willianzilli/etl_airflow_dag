@@ -1,0 +1,16 @@
+sync_mode: overwrite
+schema_change: all_time_stream
+table: fat_movimento_veiculo
+columns:
+  - EMPRESA
+  - REVENDA
+  - NUMERO_NOTA_FISCAL
+  - SERIE_NOTA_FISCAL
+  - TIPO_TRANSACAO
+  - CONTADOR
+  - ORDEM
+  - VAL_TOTAL
+  - VEICULO
+  - CODFISCAL_OPERACAO
+  - SITUACAO_ANTERIOR
+  - REVENDA_ORIGEM_ANTERIOR

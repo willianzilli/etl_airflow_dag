@@ -1,0 +1,45 @@
+sync_mode: overwrite
+schema_change: upward_stream
+table: cac_contato
+columns:
+    - EMPRESA
+    - REVENDA
+    - CONTATO
+    - DTA_CONTATO
+    - SITUACAO
+    - DES_CONTATO
+    - ATIVO_PASSIVO
+    - DEPARTAMENTO
+    - TIPO_CONTATO
+    - SUB_TIPO_CONTATO
+    - USUARIO_ABRIU
+    - USUARIO_ENCAMINHADO_ORIGINAL
+    - USUARIO_ENCAMINHADO
+    - CLIENTE
+    - FORMA_CONTATO
+    - ORIGEM
+    - NRO_OS
+    - ORIGEM_TRAFEGO
+    - DTA_FECHAMENTO
+    - PESSOA_CONTATO
+    - DTA_NOVO_CONTATO
+    - MELHOR_HORARIO
+    - MELHOR_TELEFONE
+    - DDD_1
+    - TELEFONE_1
+    - DDD_2
+    - TELEFONE_2
+    - DDD_3
+    - TELEFONE_3
+    - MELHOR_PERIODO
+    - RESULTADO
+    - CHASSI
+    - MOTIVO_VENDA
+cursor:
+  query:
+    SELECT DISTINCT *
+    FROM CAC_CONTATO
+  rules:
+    dta_contato:
+      on_create: TO_DATE('2024-01-01', 'YYYY-MM-DD')
+      on_update: SYSDATE
